@@ -1,0 +1,140 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "files": {
+    "ignoreUnknown": true,
+    "ignore": ["**/node_modules/**", "**/dist/**", "**/build/**", "**/.next/**", "**/.turbo/**"]
+  },
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true, "defaultBranch": "main" },
+  "organizeImports": { "enabled": true },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 120,
+    "attributePosition": "auto",
+    "bracketSpacing": true
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "es5",
+      "semicolons": "always",
+      "arrowParentheses": "asNeeded",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    },
+    "globals": []
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noUselessStringConcat": "error",
+        "noUselessUndefinedInitialization": "error",
+        "useDateNow": "error",
+        "useSimplifiedLogicExpression": "error",
+        "noExcessiveCognitiveComplexity": {
+          "level": "error",
+          "options": {
+            "maxAllowedComplexity": 15
+          }
+        }
+      },
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "noUndeclaredVariables": "error",
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "error",
+        "noUnusedFunctionParameters": "error",
+        "useArrayLiterals": "error"
+      },
+      "nursery": {
+        "noCommonJs": "error",
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "paths": {
+              "next/link": "Please use @oe/ui/components/link instead.",
+              "next/image": "Please use @oe/ui/components/image instead."
+            }
+          }
+        },
+        "noDuplicateCustomProperties": "error",
+        "noDuplicateElseIf": "error",
+        "noEnum": "error",
+        "noMissingVarFunction": "error",
+        "noStaticElementInteractions": "error",
+        "noSubstr": "error",
+        "noUnknownPseudoClass": "error",
+        "noUnknownPseudoElement": "error",
+        "noUselessEscapeInRegex": "error",
+        "noValueAtRule": "error",
+        "useAriaPropsSupportedByRole": "error",
+        "useConsistentCurlyBraces": "error",
+        "useImportRestrictions": "error",
+        "useSortedClasses": "warn",
+        "useTrimStartEnd": "error"
+      },
+      "performance": {
+        "noBarrelFile": "error",
+        "noReExportAll": "error",
+        "useTopLevelRegex": "error"
+      },
+      "style": {
+        "noNamespaceImport": "error",
+        "noNamespace": "error",
+        "noNegationElse": "error",
+        "noYodaExpression": "error",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "shorthand"
+          }
+        },
+        "useConsistentBuiltinInstantiation": "error",
+        "useDefaultSwitchClause": "error",
+        "useExplicitLengthCheck": "error",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false,
+            "requireAscii": true,
+            "filenameCases": ["camelCase", "kebab-case", "export"]
+          }
+        },
+        "useForOf": "error",
+        "useShorthandAssign": "error",
+        "useThrowNewError": "error",
+        "useThrowOnlyError": "error"
+      },
+      "suspicious": {
+        "noConsole": {
+          "level": "warn",
+          "options": {
+            "allow": ["assert", "error", "info", "warn"]
+          }
+        },
+        "noEmptyBlockStatements": "error",
+        "noEvolvingTypes": "error",
+        "useAwait": "error",
+        "useErrorMessage": "error",
+        "useNumberToFixedDigitsArgument": "error"
+      }
+    }
+  }
+}

@@ -1,18 +1,27 @@
 {
   "name": "oe",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "typecheck": "turbo run typecheck --",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "deps": "sherif",
+    "deps:fix": "sherif --fix --no-install",
+    "ui": "pnpm run --filter @oe/ui ui",
+    "clean": "turbo run clean && rm -rf .turbo && rm -rf node_modules && rm pnpm-lock.yaml"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "@biomejs/biome": "1.9.2",
+    "@commitlint/config-conventional": "^19.5.0",
+    "lefthook": "^1.7.16",
+    "sherif": "^1.0.0",
     "turbo": "^2.1.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.6.2"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.11.0",
   "engines": {
     "node": ">=18"
   }

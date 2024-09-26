@@ -3,5 +3,28 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "editor.defaultFormatter": "biomejs.biome",
+  "[json][javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "search.exclude": {
+    "**/dist/": true,
+    "**/.pnp.*": true,
+    "**/.yarn": true,
+    "**/yarn-error.log": true,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true,
+    "**/.next/*": true,
+    "**/.turbo/*": true
+  }
 }

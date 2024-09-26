@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["./tailwindcss/tailwind.config.ts"],
+  "exclude": ["node_modules"]
+}

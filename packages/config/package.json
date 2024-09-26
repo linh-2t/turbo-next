@@ -1,0 +1,24 @@
+{
+  "name": "@oe/config",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    "./tailwind.config": "./tailwindcss/tailwind.config.ts",
+    "./tsconfig/base.json": "./tsconfig/base.json",
+    "./tsconfig/react.json": "./tsconfig/react.json",
+    "./tsconfig/nextjs.json": "./tsconfig/nextjs.json",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .turbo && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
